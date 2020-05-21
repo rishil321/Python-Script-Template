@@ -12,6 +12,7 @@ Description of this module/script goes here
 # However multiple imports from the same lib are allowed on a line.
 # Imports from Python standard libraries
 import sys
+import logging
 
 # Imports from the cheese factory
 
@@ -27,7 +28,15 @@ import sys
  
 def main():
 	"""Docstring description for each function"""
-	sys.exit(0)
+	try:
+		# All main code here
+		pass
+	except Exception:
+		logging.exception("Error in script "+os.path.basename(__file__))
+		sys.exit(1)
+	else:
+		logging.info(os.path.basename(__file__)+" executed successfully.")
+		sys.exit(0)
  
 # If this script is being run from the command-line, then run the main() function
 if __name__ == "__main__":
