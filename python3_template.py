@@ -13,6 +13,7 @@ Description of this module/script goes here
 # Imports from Python standard libraries
 import sys
 import logging
+import os
 
 # Imports from the cheese factory
 
